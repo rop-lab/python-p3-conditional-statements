@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 
 def admin_login(username, password):
-    # your code here
-    if username.lower() == "admin" and password == "12345":
+    if (username.lower() == "admin" or username.upper() == "ADMIN") and password == "12345":
         return "Access granted"
     else:
-    
-        print("Access denied")
         return "Access denied"
-    # Test the function with different usern
-result =  admin_login("admin", "12345")
-print(result)
+
+# Example usage:
+print(admin_login("admin", "12345"))  # Output: Access granted
+print(admin_login("ADMIN", "password"))  # Output: Access denied
+print(admin_login("user", "12345"))  # Output: Access denied
+
     
 
 def hows_the_weather(temperature):
